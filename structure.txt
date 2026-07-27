@@ -1,0 +1,17 @@
+src/
+ ├── components/
+ │    ├── Header.jsx
+ │    ├── HeroSection.jsx
+ │    ├── About.jsx
+ │    ├── Skills.jsx
+ │    ├── Projects.jsx
+ │    ├── Education.jsx
+ │    └── Footer.jsx
+ │
+ ├── assets/
+ │    ├── images/
+ │    ├── icons/
+ │    └── resume.pdf
+ │
+ ├── App.jsx
+ └── main.jsx
