@@ -89,11 +89,11 @@ const Navbar = ({ activeSection }) => {
               </div>
 
               <div className="leading-tight text-left">
-                <h2 className="text-lg font-bold text-gray-900  dark:text-white font-display">
+                <h2 className="text-lg  font-semibold text-gradient  dark:text-white font-display">
                   Hafiz Ahmad Shirzad
                 </h2>
 
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-gradient dark:text-cyan-800 font-semibold">
                   Full Stack Developer
                 </p>
               </div>

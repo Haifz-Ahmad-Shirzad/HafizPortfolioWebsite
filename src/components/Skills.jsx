@@ -191,7 +191,7 @@ const Skills = () => {
           <h3 className="mb-6 text-lg font-semibold text-white ">
             Also experienced with
           </h3>
-          <div className="flex flex-wrap justify-center gap-3 section-text">
+          <div className="flex flex-wrap justify-center gap-3 section-text ">
             {[
               "Express.js",
               "REST API",

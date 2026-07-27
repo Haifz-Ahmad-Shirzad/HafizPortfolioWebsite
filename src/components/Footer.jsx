@@ -17,8 +17,8 @@ const Footer = () => {
               <Zap className="w-4 h-4 text-[#0a0a0f]" />
             </div>
             <span className="text-lg font-bold font-display">
-              <span className="text-white block">Hafiz Ahmad Shirzad</span>
-              <span className="text-[#00ff88]">Full Stack Developer</span>
+              <span className=" text-gradient  block">Hafiz Ahmad Shirzad</span>
+              <span className="text-gradient">Full Stack Developer</span>
             </span>
           </div>
 

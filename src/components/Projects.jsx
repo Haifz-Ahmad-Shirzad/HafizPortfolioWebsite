@@ -54,10 +54,15 @@ const projects = [
     icon: "🏭",
   },
   {
-    title: "Statistics Data Analysis Project",
-    description:
-      "A data analysis project using Python to process large datasets, generate statistical reports, and provide insights through data visualization.",
-    tags: ["Python", "Pandas", "Scikit-learn", "Flask", "Data Analysis"],
+    title: "Portfolio Website",
+    description: "A Modern professional portfolio website",
+    tags: [
+      "React",
+      "Tailwindcss",
+      "EmailJs",
+      "Responsive Design",
+      "Reusable Components",
+    ],
     github: "https://github.com/Haifz-Ahmad-Shirzad",
     live: null,
     stats: {
@@ -75,8 +80,8 @@ const projects = [
     description:
       "A modern personal portfolio website built to showcase my skills, projects, experience, and journey as a Full Stack Developer.",
     tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/Haifz-Ahmad-Shirzad",
-    live: null,
+    github: "https://github.com/Haifz-Ahmad-Shirzad/HafizPortfolioWebsite",
+    live: "https://hafiz-portfolio-website.vercel.app/",
     stats: {
       stars: 0,
       forks: 0,

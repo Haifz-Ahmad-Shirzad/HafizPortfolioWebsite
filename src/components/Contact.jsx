@@ -1,6 +1,7 @@
 // src/components/Contact.jsx
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import {
   Send,
   Mail,
@@ -69,27 +70,33 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_hafiz",
-        "template_contact",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
-
+      toast.loading("Sending...");
       setIsSubmitted(true);
+      toast.success("Message sent successfully!");
+
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
-    } catch (err) {
-      console.error(err);
+
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (error) {
+      console.error(error);
+
       alert("Failed to send message.");
+      toast.error("Failed to send message.");
     }
 
     setIsSubmitting(false);
