@@ -2,15 +2,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import {
-  Send,
-  Mail,
-  MapPin,
-  Phone,
-  MessageSquare,
-  CheckCircle2,
-  Loader2,
-} from "lucide-react";
+import { Send, Mail, MapPin, Phone, CheckCircle2, Loader2 } from "lucide-react";
 
 const contactInfo = [
   {
@@ -53,16 +45,6 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-  //   setTimeout(() => {
-  //     setIsSubmitting(false);
-  //     setIsSubmitted(true);
-  //     setFormData({ name: "", email: "", subject: "", message: "" });
-  //     setTimeout(() => setIsSubmitted(false), 5000);
-  //   }, 2000);
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -77,6 +59,7 @@ const Contact = () => {
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
+          time: new Date().toLocaleString(),
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
@@ -107,7 +90,7 @@ const Contact = () => {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div data-aos="fade-up" className="mb-16 text-center">
-          <span className="text-[#00ff88] text-sm font-medium tracking-widest uppercase">
+          <span className="text-neon text-sm font-medium tracking-widest uppercase">
             Contact
           </span>
           <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
@@ -134,8 +117,8 @@ const Contact = () => {
                 className="block p-5 transition-all duration-300 rounded-2xl glass-card glass-card-hover"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center">
-                    <info.icon className="w-5 h-5 text-[#00ff88]" />
+                  <div className="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center">
+                    <info.icon className="w-5 h-5 text-neon" />
                   </div>
                   <div>
                     <p className="text-xs tracking-wider text-gray-500 uppercase">
@@ -159,7 +142,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg glass-card text-sm text-gray-400 hover:text-[#00ff88] hover:border-[#00ff88]/30 transition-all"
+                    className="px-4 py-2 rounded-lg glass-card text-sm text-gray-400 hover:text-neon hover:border-neon/30 transition-all"
                   >
                     {social.name}
                   </a>
@@ -180,8 +163,8 @@ const Contact = () => {
             >
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#00ff88]/10 flex items-center justify-center mb-4">
-                    <CheckCircle2 className="w-8 h-8 text-[#00ff88]" />
+                  <div className="w-16 h-16 rounded-full bg-neon/10 flex items-center justify-center mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-neon" />
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-white">
                     Message Sent!
@@ -192,7 +175,7 @@ const Contact = () => {
                 </div>
               ) : (
                 <>
-                  <div className="grid gap-4 mb-4 sm:grid-cols-2">
+                  <div className="grid gap-4 mb-4 sm:grid-cols-2 ">
                     <div>
                       <label className="block mb-2 text-sm text-gray-400">
                         Name
@@ -204,7 +187,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white placeholder-gray-500 focus:outline-none focus:border-[#00ff88]/40 focus:ring-1 focus:ring-[#00ff88]/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white/3 border border-gray-700  text-white placeholder-gray-500 focus:outline-none focus:border-neon/40 focus:ring-1 focus:ring-neon/20 transition-all"
                         placeholder="Your name"
                       />
                     </div>
@@ -219,7 +202,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white placeholder-gray-500 focus:outline-none focus:border-[#00ff88]/40 focus:ring-1 focus:ring-[#00ff88]/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white/3 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-neon/40 focus:ring-1 focus:ring-neon/20 transition-all"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -235,7 +218,7 @@ const Contact = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, subject: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white placeholder-gray-500 focus:outline-none focus:border-[#00ff88]/40 focus:ring-1 focus:ring-[#00ff88]/20 transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-white/3 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-neon/40 focus:ring-1 focus:ring-neon/20 transition-all"
                       placeholder="Project inquiry"
                     />
                   </div>
@@ -250,14 +233,14 @@ const Contact = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white placeholder-gray-500 focus:outline-none focus:border-[#00ff88]/40 focus:ring-1 focus:ring-[#00ff88]/20 transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white/3 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-neon/40 focus:ring-1 focus:ring-neon/20 transition-all resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0f] font-semibold hover:shadow-xl hover:shadow-[#00ff88]/30 transition-all duration-300 hover:scale-[1.02] active:scale-98 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-xl bg-linear-to-r from-neon to-neon-blue text-dark-900 font-semibold hover:shadow-xl hover:shadow-neon/30 transition-all duration-300 hover:scale-[1.02] active:scale-98 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>

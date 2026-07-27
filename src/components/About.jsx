@@ -41,7 +41,7 @@ const About = () => {
           data-aos="fade-up"
           className="mb-16 text-center section-title section-text"
         >
-          <span className="text-[#00ff88] text-sm font-medium tracking-widest uppercase">
+          <span className="text-neon text-sm font-medium tracking-widest uppercase">
             About Me
           </span>
           <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
@@ -59,18 +59,43 @@ const About = () => {
           {/* Left - Image/Visual */}
           <div data-aos="fade-right" data-aos-duration="800">
             <div className="relative">
-              <div className="w-full aspect-[4/5] rounded-3xl glass-card overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 via-transparent to-[#b44dff]/10" />
+              <div
+                className="
+    relative
+    w-full
+    min-h-[430px]
+    sm:min-h-[520px]
+    lg:min-h-[620px]
+    rounded-3xl
+    glass-card
+    overflow-hidden
+  "
+              >
+                <div className="absolute inset-0 bg-linear-to-br from-[#00ff88]/10 via-transparent to-[#b44dff]/10" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-[#00ff88] shadow-2xl shadow-[#00ff88]/20">
+                    <div
+                      className="
+    mx-auto mb-6
+    w-40 h-40
+    sm:w-48 sm:h-48
+    md:w-56 md:h-56
+    lg:w-64 lg:h-64
+    overflow-hidden
+    rounded-full
+    border-4 border-[#00ff88]
+    shadow-2xl shadow-[#00ff88]/20
+    bg-[#111118]
+    shrink-0
+  "
+                    >
                       <img
                         src={profileImage}
                         alt="Hafiz Ahmad Shirzad"
-                        className="object-center w-full h-full"
+                        className="w-full h-full object-cover object-center"
                       />
                     </div>
-                    <h3 className="text-2xl font-bold text-white font-display">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
                       Hafiz Ahmad Shirzad
                     </h3>
                     <p className="text-gray-400">
@@ -79,10 +104,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute flex items-center justify-center w-20 h-20 top-4 right-4 rounded-2xl glass-card">
+                <div className="absolute top-4 right-4 hidden sm:flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-2xl glass-card">
                   <Code className="w-8 h-8 text-[#00ff88]" />
                 </div>
-                <div className="absolute flex items-center justify-center w-16 h-16 bottom-4 left-4 rounded-2xl glass-card">
+                <div className="absolute bottom-4 left-4 hidden sm:flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 rounded-2xl glass-card">
                   <Zap className="w-6 h-6 text-[#ffdd57]" />
                 </div>
               </div>

@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import { useState } from "react";
 import {
   SiHtml5,
@@ -18,9 +17,7 @@ import {
   SiJsonwebtokens,
   SiFastapi,
 } from "react-icons/si";
-
 import { FaCss3Alt, FaProjectDiagram } from "react-icons/fa";
-
 import { VscVscode } from "react-icons/vsc";
 
 const skillCategories = [
@@ -80,9 +77,9 @@ const skillCategories = [
   {
     title: "Learning",
     skills: [
+      { name: "JWT", icon: SiJsonwebtokens, level: 72, color: "#ffffff" },
       { name: "Prisma ORM", icon: SiPrisma, level: 70, color: "#2D3748" },
       { name: "MongoDB", icon: SiMongodb, level: 65, color: "#47A248" },
-      { name: "JWT", icon: SiJsonwebtokens, level: 72, color: "#ffffff" },
       {
         name: "Software Architecture",
         icon: FaProjectDiagram,
@@ -106,7 +103,7 @@ const Skills = () => {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div data-aos="fade-up" className="mb-16 text-center">
-          <span className="text-[#00ff88] text-sm font-medium tracking-widest uppercase">
+          <span className="text-neon text-sm font-medium tracking-widest uppercase">
             Skills
           </span>
           <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
@@ -131,8 +128,8 @@ const Skills = () => {
               onClick={() => setActiveCategory(i)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === i
-                  ? "bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0f] shadow-lg shadow-[#00ff88]/20"
-                  : "glass-card text-gray-400 hover:text-white hover:bg-white/[0.04]"
+                  ? "bg-linear-to-r from-neon to-neon-blue text-dark-900shadow-lg shadow-neon/20"
+                  : "glass-card text-gray-400 hover:text-white hover:bg-white/4"
               }`}
             >
               {cat.title}
@@ -162,11 +159,11 @@ const Skills = () => {
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-medium text-white">{skill.name}</span>
-                    <span className="text-[#00ff88] text-sm font-mono">
+                    <span className="text-neon text-sm font-mono">
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="h-2 rounded-full bg-white/[0.04] overflow-hidden">
+                  <div className="h-2 rounded-full bg-white/4 overflow-hidden">
                     <div
                       className="h-full transition-all duration-1000 ease-out rounded-full"
                       style={{
@@ -208,7 +205,7 @@ const Skills = () => {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full glass-card text-sm text-gray-300 hover:text-[#00ff88] hover:border-[#00ff88]/30 transition-all duration-300 cursor-default"
+                className="px-4 py-2 rounded-full glass-card text-sm text-zinc-400 hover:text-neon hover:border-neon/30 transition-all duration-300 cursor-default"
               >
                 {tech}
               </span>

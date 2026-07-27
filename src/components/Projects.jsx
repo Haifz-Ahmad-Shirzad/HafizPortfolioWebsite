@@ -64,7 +64,7 @@ const projects = [
       "Reusable Components",
     ],
     github: "https://github.com/Haifz-Ahmad-Shirzad",
-    live: null,
+    live: "https://hafiz-portfolio-website.vercel.app/",
     stats: {
       stars: 0,
       forks: 0,
@@ -81,7 +81,7 @@ const projects = [
       "A modern personal portfolio website built to showcase my skills, projects, experience, and journey as a Full Stack Developer.",
     tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Haifz-Ahmad-Shirzad/HafizPortfolioWebsite",
-    live: "https://hafiz-portfolio-website.vercel.app/",
+    live: "https://hafiz-portfolio-website-bnq3sqm5n-shirzad-tech.vercel.app/",
     stats: {
       stars: 0,
       forks: 0,
@@ -105,7 +105,7 @@ const Projects = () => {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div data-aos="fade-up" className="mb-16 text-center">
-          <span className="text-[#00ff88] text-sm font-medium tracking-widest uppercase">
+          <span className="text-neon-sm font-medium tracking-widest uppercase">
             Projects
           </span>
           <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
@@ -130,8 +130,8 @@ const Projects = () => {
               onClick={() => setFilter(f)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium capitalize transition-all duration-300 ${
                 filter === f
-                  ? "bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0f] shadow-lg shadow-[#00ff88]/20"
-                  : "glass-card text-gray-400 hover:text-white hover:bg-white/[0.04]"
+                  ? "bg-linear-to-r from-neon to-neon-blue text-dark-900 shadow-lg shadow-neon/20"
+                  : "glass-card text-gray-400 hover:text-white hover:bg-white/4"
               }`}
             >
               {f}
@@ -154,21 +154,21 @@ const Projects = () => {
             >
               {/* Background */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.color}`}
+                className={`absolute inset-0 bg-linear-to-br ${project.color}`}
               />
               <div
                 className={`absolute inset-0 border ${project.borderColor} rounded-3xl`}
               />
 
               {/* Content */}
-              <div className="relative p-6 h-full flex flex-col min-h-[280px]">
+              <div className="relative p-6 h-full flex flex-col min-h-70">
                 {/* Project Icon/Preview */}
                 <div className="flex items-center justify-center mb-4 text-2xl w-14 h-14 rounded-2xl glass-card">
                   {project.icon}
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white font-display mb-2 group-hover:text-[#00ff88] transition-colors">
+                  <h3 className="text-xl font-bold text-white font-display mb-2 group-hover:text-neon transition-colors">
                     {project.title}
                   </h3>
                   <p className="mb-4 text-sm leading-relaxed text-gray-400">
@@ -204,7 +204,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-[#00ff88]"
+                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-neon"
                     >
                       <Github className="w-4 h-4" />
                     </a>
@@ -212,7 +212,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-[#00ff88]"
+                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-neon"
                     >
                       <Github className="w-4 h-4" />
                     </a>
@@ -225,13 +225,13 @@ const Projects = () => {
                     hoveredIndex === i ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/50 to-transparent rounded-3xl" />
+                  <div className="absolute inset-0 bg-linear-to-t from-dark-900 via-dark-900/50 to-transparent rounded-3xl" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3 rounded-full bg-white text-[#0a0a0f] font-semibold flex items-center gap-2 hover:shadow-xl transition-all"
+                      className="px-6 py-3 rounded-full bg-white text-dark-900font-semibold flex items-center gap-2 hover:shadow-xl transition-all"
                     >
                       <Eye className="w-4 h-4" />
                       View Project

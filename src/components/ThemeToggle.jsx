@@ -16,7 +16,7 @@ const ThemeToggle = () => {
       items-center
       justify-center
       text-gray-400
-      hover:text-[#00ff88]
+      hover:text-neon
       transition-all
       "
     >

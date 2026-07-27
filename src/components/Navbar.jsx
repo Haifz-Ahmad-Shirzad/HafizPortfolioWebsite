@@ -12,7 +12,6 @@ import {
   Mail,
   FileDown,
 } from "lucide-react";
-
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
@@ -60,27 +59,27 @@ const Navbar = ({ activeSection }) => {
         transition-all duration-500
         ${
           isScrolled
-            ? "bg-white/80 dark:bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/[0.05] shadow-lg"
+            ? "bg-white/80 dark:bg-dark-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/5 shadow-lg"
             : "bg-transparent"
         }
         `}
       >
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className=" px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
 
             <button
               onClick={() => scrollTo("home")}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-2 group"
             >
               <div
-                className="
+                className=" 
                 w-11 h-11 rounded-xl
                 flex items-center justify-center
-                bg-gradient-to-br from-[#00ff88] to-[#00d4ff]
-                text-[#0a0a0f]
+                bg-linear-to-br from-neon to-neon-blue
+                text-dark-900
                 font-bold
-                shadow-lg shadow-[#00ff88]/20
+                shadow-lg shadow-neon/20
                 group-hover:scale-105
                 transition-all
                 "
@@ -88,8 +87,8 @@ const Navbar = ({ activeSection }) => {
                 HAS
               </div>
 
-              <div className="leading-tight text-left">
-                <h2 className="text-lg  font-semibold text-gradient  dark:text-white font-display">
+              <div className=" leading-tight text-left">
+                <h2 className=" text-lg  font-semibold text-gradient  dark:text-white font-display">
                   Hafiz Ahmad Shirzad
                 </h2>
 
@@ -101,7 +100,7 @@ const Navbar = ({ activeSection }) => {
 
             {/* Desktop Navigation */}
 
-            <div className="items-center hidden gap-1 lg:flex">
+            <div className="items-center hidden gap-1  xl:flex">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
@@ -113,8 +112,8 @@ const Navbar = ({ activeSection }) => {
 
                   ${
                     activeSection === link.id
-                      ? "bg-[#00ff88]/10 text-[#00ff88]"
-                      : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
+                      ? "bg-neon/10 text-neon"
+                      : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/4 dark:hover:bg-white/4"
                   }
                   `}
                 >
@@ -126,7 +125,7 @@ const Navbar = ({ activeSection }) => {
                         absolute bottom-0 left-1/2
                         -translate-x-1/2
                         w-1 h-1 rounded-full
-                        bg-[#00ff88]
+                        bg-neon
                         "
                     />
                   )}
@@ -136,7 +135,7 @@ const Navbar = ({ activeSection }) => {
 
             {/* Desktop Actions */}
 
-            <div className="items-center hidden gap-3 lg:flex">
+            <div className="lg:flex hidden xl:flex items-center gap-3">
               <ThemeToggle />
 
               <button
@@ -145,10 +144,10 @@ const Navbar = ({ activeSection }) => {
                 flex items-center gap-2
                 px-5 py-2.5
                 rounded-full
-                bg-gradient-to-r
-                from-[#00ff88]
-                to-[#00d4ff]
-                text-[#0a0a0f]
+                bg-linear-to-r
+                from-neon
+                to-neon-blue
+                text-dark-900
                 font-semibold
                 text-sm
                 hover:scale-105
@@ -162,19 +161,19 @@ const Navbar = ({ activeSection }) => {
 
             {/* Mobile Actions */}
 
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-2 lg:hidden   xl:hidden">
               <ThemeToggle />
 
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
                 className="
-                p-2 rounded-lg
+                p-12 rounded-lg
                 text-gray-500
                 dark:text-gray-400
                 hover:text-gray-900
                 dark:hover:text-white
-                hover:bg-black/[0.04]
-                dark:hover:bg-white/[0.05]
+                hover:bg-black/4
+                dark:hover:bg-white/5
                 "
               >
                 {isMobileOpen ? (
@@ -210,15 +209,15 @@ const Navbar = ({ activeSection }) => {
         <div
           className={`
           absolute right-0 top-0
-          h-full w-72
+          h-full w-70
           p-6 pt-24
 
           bg-white
-          dark:bg-[#111118]
+          dark:bg-dark-800
 
           border-l
           border-gray-200
-          dark:border-white/[0.05]
+          dark:border-white/5
 
           transition-transform duration-300
 
@@ -242,8 +241,8 @@ const Navbar = ({ activeSection }) => {
 
                     ${
                       activeSection === link.id
-                        ? "bg-[#00ff88]/10 text-[#00ff88]"
-                        : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
+                        ? "bg-neon/10 text-neon"
+                        : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/4 dark:hover:bg-white/4"
                     }
 
                     `}
@@ -260,14 +259,15 @@ const Navbar = ({ activeSection }) => {
               download
               className="
               flex items-center justify-center gap-2
-              mt-4 px-5 py-3
+              mt-4 px-4 py-3  w-[80%]
+
               rounded-xl
               border
               border-gray-200
               dark:border-white/10
               text-gray-600
               dark:text-gray-300
-              hover:text-[#00ff88]
+              hover:text-neon
               "
             >
               <FileDown className="w-4 h-4" />
@@ -279,11 +279,12 @@ const Navbar = ({ activeSection }) => {
               className="
               flex items-center justify-center gap-2
               mt-2 px-5 py-3
+              w-[80%]
               rounded-xl
-              bg-gradient-to-r
-              from-[#00ff88]
-              to-[#00d4ff]
-              text-[#0a0a0f]
+              bg-linear-to-r
+              from-neon
+              to-neon-blue
+              text-dark-900
               font-semibold
               "
             >
