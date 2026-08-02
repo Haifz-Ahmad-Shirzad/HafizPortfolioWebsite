@@ -64,13 +64,13 @@ const Navbar = ({ activeSection }) => {
         }
         `}
       >
-        <div className=" px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden">
+          <div className="flex items-center justify-between h-20 min-w-0">
             {/* Logo */}
 
             <button
               onClick={() => scrollTo("home")}
-              className="flex items-center gap-2 group"
+              className="flex items-center gap-2 group min-w-0"
             >
               <div
                 className=" 
@@ -88,7 +88,7 @@ const Navbar = ({ activeSection }) => {
               </div>
 
               <div className=" leading-tight text-left">
-                <h2 className=" text-lg  font-semibold text-gradient  dark:text-white font-display">
+                <h2 className=" text-sm  font-semibold text-gradient  dark:text-white font-display">
                   Hafiz Ahmad Shirzad
                 </h2>
 
@@ -161,13 +161,13 @@ const Navbar = ({ activeSection }) => {
 
             {/* Mobile Actions */}
 
-            <div className="flex items-center gap-2 lg:hidden   xl:hidden">
+            <div className="flex items-center gap-2 lg:hidden shrink-0">
               <ThemeToggle />
 
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
                 className="
-                p-12 rounded-lg
+                p-2 rounded-lg
                 text-gray-500
                 dark:text-gray-400
                 hover:text-gray-900
@@ -209,16 +209,16 @@ const Navbar = ({ activeSection }) => {
         <div
           className={`
           absolute right-0 top-0
-          h-full w-70
+h-full w-[85vw] max-w-sm
           p-6 pt-24
 
           bg-white
-          dark:bg-dark-800
+          dark:scheme-dark
+          dark:bg-dark-900
 
           border-l
           border-gray-200
           dark:border-white/5
-
           transition-transform duration-300
 
           ${isMobileOpen ? "translate-x-0" : "translate-x-full"}

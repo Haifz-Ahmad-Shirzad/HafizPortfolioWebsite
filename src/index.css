@@ -72,6 +72,8 @@ html {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -81,6 +83,8 @@ body {
   transition:
     background-color 0.35s ease,
     color 0.35s ease;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 html.dark body {
   background: #0a0a0f;

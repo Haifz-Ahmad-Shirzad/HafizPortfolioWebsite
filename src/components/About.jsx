@@ -44,7 +44,7 @@ const About = () => {
           <span className="text-neon text-sm font-medium tracking-widest uppercase">
             About Me
           </span>
-          <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
+          <h2 className="mt-3 mb-4 text-2xl font-bold md:text-5xl font-display">
             <span className="text-white">Learning</span>
             <span className="text-gradient"> Building & Growing</span>
           </h2>

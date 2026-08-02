@@ -101,7 +101,7 @@ const Hero = () => {
         {/* Heading */}
         <h1
           data-aos="fade-up"
-          className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-display"
+          className="mb-4 text-3xl font-bold tracking-tight sm:text-3xl md:text-6xl lg:text-7xl font-display"
         >
           <span className="text-white">Hi, I'm </span>
 
@@ -112,7 +112,7 @@ const Hero = () => {
         <p
           data-aos="fade-up"
           data-aos-delay="100"
-          className="mb-6 text-lg font-medium text-[#00ff88]"
+          className="text-gradient mb-6 text-sm font-medium bg-linear-to-r from-orange-700 to-green-300 bg-clip-text text-transparent sm:text-lg md:text-xl lg:text-2xl"
         >
           Building scalable web applications with modern technologies.
         </p>
