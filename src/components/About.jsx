@@ -41,7 +41,7 @@ const About = () => {
           data-aos="fade-up"
           className="mb-16 text-center section-title section-text"
         >
-          <span className="text-neon text-sm font-medium tracking-widest uppercase">
+          <span className="text-sm font-medium tracking-widest uppercase text-neon">
             About Me
           </span>
           <h2 className="mt-3 mb-4 text-2xl font-bold md:text-5xl font-display">
@@ -77,13 +77,14 @@ const About = () => {
                     <div
                       className="
     mx-auto mb-6
-    w-40 h-40
-    sm:w-48 sm:h-48
-    md:w-56 md:h-56
-    lg:w-64 lg:h-64
+    w-60 h-60
+    sm:w-60 sm:h-60
+    md:w-70 md:h-70
+    lg:w-80 lg:h-80
+    xl:w-100 xl:h-100
     overflow-hidden
-    rounded-full
-    border-4 border-[#00ff88]
+    rounded-[10%]
+    border-2 border-[#00ff88]
     shadow-2xl shadow-[#00ff88]/20
     bg-[#111118]
     shrink-0
@@ -92,10 +93,10 @@ const About = () => {
                       <img
                         src={profileImage}
                         alt="Hafiz Ahmad Shirzad"
-                        className="w-full h-full object-cover object-center"
+                        className="object-center w-full h-full object-fit "
                       />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
+                    <h3 className="text-xl font-bold text-white sm:text-2xl font-display">
                       Hafiz Ahmad Shirzad
                     </h3>
                     <p className="text-gray-400">
@@ -104,10 +105,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute top-4 right-4 hidden sm:flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-2xl glass-card">
+                <div className="absolute items-center justify-center hidden w-16 h-16 top-4 right-4 sm:flex lg:w-20 lg:h-20 rounded-2xl glass-card">
                   <Code className="w-8 h-8 text-[#00ff88]" />
                 </div>
-                <div className="absolute bottom-4 left-4 hidden sm:flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 rounded-2xl glass-card">
+                <div className="absolute items-center justify-center hidden bottom-4 left-4 sm:flex w-14 h-14 lg:w-16 lg:h-16 rounded-2xl glass-card">
                   <Zap className="w-6 h-6 text-[#ffdd57]" />
                 </div>
               </div>
