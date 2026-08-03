@@ -45,13 +45,13 @@ const skillCategories = [
         name: "Express.js",
         icon: SiExpress,
         level: 80,
-        color: "#ffffff",
+        color: "gray",
       },
       {
         name: "PostgreSQL",
         icon: SiPostgresql,
         level: 80,
-        color: "#4169E1",
+        color: "#336791",
       },
       { name: "MySQL", icon: SiMysql, level: 78, color: "#4479A1" },
       {
@@ -67,7 +67,7 @@ const skillCategories = [
     title: "Tools",
     skills: [
       { name: "Git", icon: SiGit, level: 88, color: "#F05032" },
-      { name: "GitHub", icon: SiGithub, level: 88, color: "#ffffff" },
+      { name: "GitHub", icon: SiGithub, level: 88, color: "gray" },
       { name: "VS Code", icon: VscVscode, level: 95, color: "#007ACC" },
       { name: "Vite", icon: SiVite, level: 88, color: "#646CFF" },
       { name: "Postman", icon: SiPostman, level: 82, color: "#FF6C37" },
@@ -103,7 +103,7 @@ const Skills = () => {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div data-aos="fade-up" className="mb-16 text-center">
-          <span className="text-neon text-sm font-medium tracking-widest uppercase">
+          <span className="text-sm font-medium tracking-widest uppercase text-neon">
             Skills
           </span>
           <h2 className="mt-3 mb-4 text-xl font-bold md:text-4xl font-display">
@@ -159,11 +159,11 @@ const Skills = () => {
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-medium text-white">{skill.name}</span>
-                    <span className="text-neon text-sm font-mono">
+                    <span className="font-mono text-sm text-neon">
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="h-2 rounded-full bg-white/4 overflow-hidden">
+                  <div className="h-2 overflow-hidden rounded-full bg-white/4">
                     <div
                       className="h-full transition-all duration-1000 ease-out rounded-full"
                       style={{
@@ -205,7 +205,7 @@ const Skills = () => {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full glass-card text-sm text-zinc-400 hover:text-neon hover:border-neon/30 transition-all duration-300 cursor-default"
+                className="px-4 py-2 text-sm transition-all duration-300 rounded-full cursor-default glass-card text-zinc-400 hover:text-neon hover:border-neon/30"
               >
                 {tech}
               </span>
