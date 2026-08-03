@@ -209,7 +209,7 @@ const Experience = () => {
         {/* Resume Download */}
         <div data-aos="fade-up" className="mt-16 text-center">
           <a
-            href="/public/Hafiz Resume.pdf"
+            href="/Hafiz_Resume.pdf"
             download
             className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0f] font-semibold hover:shadow-xl transition-all inline-flex items-center gap-2"
           >

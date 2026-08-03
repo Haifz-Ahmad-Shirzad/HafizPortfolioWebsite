@@ -1,5 +1,5 @@
 // src/components/Navbar.jsx
-
+import { useTheme } from "../context/ThemeContext";
 import { useState, useEffect } from "react";
 import {
   Menu,
@@ -24,6 +24,7 @@ const navLinks = [
 ];
 
 const Navbar = ({ activeSection }) => {
+  const { theme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -64,35 +65,24 @@ const Navbar = ({ activeSection }) => {
         }
         `}
       >
-        <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden">
+        <div className="w-full px-4 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 min-w-0">
             {/* Logo */}
 
             <button
               onClick={() => scrollTo("home")}
-              className="flex items-center gap-2 group min-w-0"
+              className="flex items-center min-w-0 gap-2 group"
             >
-              <div
-                className=" 
-                w-11 h-11 rounded-xl
-                flex items-center justify-center
-                bg-linear-to-br from-neon to-neon-blue
-                text-dark-900
-                font-bold
-                shadow-lg shadow-neon/20
-                group-hover:scale-105
-                transition-all
-                "
-              >
+              <div className="flex items-center justify-center font-bold transition-all shadow-lg w-11 h-11 rounded-xl bg-linear-to-br from-neon to-neon-blue text-dark-900 shadow-neon/20 group-hover:scale-105">
                 HAS
               </div>
 
-              <div className=" leading-tight text-left">
-                <h2 className=" text-sm  font-semibold text-gradient  dark:text-white font-display">
+              <div className="leading-tight text-left ">
+                <h2 className="text-sm font-semibold text-gradient dark:text-white font-display">
                   Hafiz Ahmad Shirzad
                 </h2>
 
-                <p className="text-xs text-gradient dark:text-cyan-800 font-semibold">
+                <p className="text-xs font-semibold text-gradient dark:text-cyan-800">
                   Full Stack Developer
                 </p>
               </div>
@@ -100,7 +90,7 @@ const Navbar = ({ activeSection }) => {
 
             {/* Desktop Navigation */}
 
-            <div className="items-center hidden gap-1  xl:flex">
+            <div className="items-center hidden gap-1 xl:flex">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
@@ -120,14 +110,7 @@ const Navbar = ({ activeSection }) => {
                   {link.label}
 
                   {activeSection === link.id && (
-                    <span
-                      className="
-                        absolute bottom-0 left-1/2
-                        -translate-x-1/2
-                        w-1 h-1 rounded-full
-                        bg-neon
-                        "
-                    />
+                    <span className="absolute bottom-0 w-1 h-1 -translate-x-1/2 rounded-full left-1/2 bg-neon" />
                   )}
                 </button>
               ))}
@@ -135,7 +118,7 @@ const Navbar = ({ activeSection }) => {
 
             {/* Desktop Actions */}
 
-            <div className="lg:flex hidden xl:flex items-center gap-3">
+            <div className="items-center hidden gap-3 lg:flex xl:flex">
               <ThemeToggle />
 
               <button
@@ -166,15 +149,7 @@ const Navbar = ({ activeSection }) => {
 
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
-                className="
-                p-2 rounded-lg
-                text-gray-500
-                dark:text-gray-400
-                hover:text-gray-900
-                dark:hover:text-white
-                hover:bg-black/4
-                dark:hover:bg-white/5
-                "
+                className="p-2 text-gray-500 rounded-lg dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/4 dark:hover:bg-white/5"
               >
                 {isMobileOpen ? (
                   <X className="w-6 h-6" />
@@ -202,28 +177,26 @@ const Navbar = ({ activeSection }) => {
         `}
       >
         <div
-          className="absolute inset-0  bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsMobileOpen(false)}
         />
 
         <div
           className={`
-          absolute right-0 top-0
-h-full w-[85vw] max-w-sm
-          p-6 pt-24
+    absolute right-0 top-0
+    h-full w-[85vw] max-w-sm
+    p-6 pt-24
 
-          bg-white
-          dark:scheme-dark
-          dark:bg-dark-900
+    bg-white text-gray-900
+    dark:bg-dark-900 dark:text-white
 
-          border-l
-          border-gray-200
-          dark:border-white/5
-          transition-transform duration-300
+    border-l border-gray-200
+    dark:border-white/5
 
-          ${isMobileOpen ? "translate-x-0" : "translate-x-full"}
+    transition-transform duration-300
 
-          `}
+    ${isMobileOpen ? "translate-x-0" : "translate-x-full"}
+`}
         >
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => {
@@ -241,8 +214,8 @@ h-full w-[85vw] max-w-sm
 
                     ${
                       activeSection === link.id
-                        ? "bg-neon/10 text-neon"
-                        : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/4 dark:hover:bg-white/4"
+                        ? "bg-[#00ff88]/10 text-[#00ff88]"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
                     }
 
                     `}
