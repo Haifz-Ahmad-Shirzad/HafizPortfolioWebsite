@@ -91,6 +91,29 @@ const projects = [
     borderColor: "border-teal-500/20",
     icon: "🚀",
   },
+  {
+    title: "Zirak AI — AI Assistant",
+    description:
+      "An AI-powered conversational assistant designed to help users with learning, programming, research, debugging, and software project planning through a modern responsive interface.",
+    tags: [
+      "AI",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "AI API",
+      "Responsive Design",
+    ],
+    github: null,
+    live: "https://zirak-ai.b12sites.com/",
+    stats: {
+      stars: 0,
+      forks: 0,
+    },
+    featured: true,
+    color: "from-violet-500/20 to-fuchsia-500/20",
+    borderColor: "border-violet-500/20",
+    icon: "🤖",
+  },
 ];
 
 const Projects = () => {
