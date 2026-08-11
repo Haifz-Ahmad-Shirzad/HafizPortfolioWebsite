@@ -76,12 +76,12 @@ const projects = [
   },
 
   {
-    title: "Developer Portfolio Website",
+    title: "Oil & Lubricants website",
     description:
-      "A modern personal portfolio website built to showcase my skills, projects, experience, and journey as a Full Stack Developer.",
+      "A modern  website built to show products , Categories and Contact info",
     tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Haifz-Ahmad-Shirzad/HafizPortfolioWebsite",
-    live: "https://hafiz-portfolio-website-bnq3sqm5n-shirzad-tech.vercel.app/",
+    live: "https://atlantic-oil-lubricants-ltd-staging.b12sites.com/",
     stats: {
       stars: 0,
       forks: 0,
