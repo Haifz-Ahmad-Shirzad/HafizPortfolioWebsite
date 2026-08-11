@@ -76,7 +76,7 @@ const projects = [
   },
 
   {
-    title: "Oil & Lubricants website",
+    title: "Premium Oils & Lubricants for Afghanistan",
     description:
       "A modern  website built to show products , Categories and Contact info",
     tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
