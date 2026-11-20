@@ -24,8 +24,8 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML5", icon: SiHtml5, level: 95, color: "#E34F26" },
-      { name: "CSS3", icon: FaCss3Alt, level: 92, color: "#1572B6" },
+      { name: "HTML5", icon: SiHtml5, level: 100, color: "#E34F26" },
+      { name: "CSS3", icon: FaCss3Alt, level: 100, color: "#1572B6" },
       { name: "JavaScript", icon: SiJavascript, level: 90, color: "#F7DF1E" },
       { name: "React", icon: SiReact, level: 88, color: "#61DAFB" },
       {

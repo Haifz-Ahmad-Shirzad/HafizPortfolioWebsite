@@ -11,6 +11,23 @@ import {
 const experiences = [
   {
     type: "work",
+    title: "Fullstack Intern",
+    company: "Luilala Soft",
+    location: "Kandahar, Afghanistan",
+    period: "2026 - Present",
+    description:
+      "Working as fullstack Developer intern focused on practical software engineering, Development, Testing and Maintenance.",
+    highlights: [
+      "Gaining experience Through  Software Engineering",
+      "Learning Software Engineering , sytem Design",
+      "working in a professional software Engineering Envirnment",
+    ],
+    tech: ["MongoDB", "Express.js", "React", "Node.js"],
+    color: "border-l-[#00d4ff]",
+    glow: "shadow-[#00d4ff]/10",
+  },
+  {
+    type: "work",
     title: "IT Intern",
     company: "Ministry of Finance",
     location: "Kabul, Afghanistan",
@@ -36,7 +53,7 @@ const experiences = [
     title: "Frontend Developer",
     company: "Luilala.com",
     location: "Kandahar, Afghanistan",
-    period: "2025 - Present",
+    period: "2024 - 2025",
     description:
       "Worked as a Frontend Developer building responsive and user-focused web interfaces. Collaborated on improving user experience and implementing modern frontend practices.",
     highlights: [

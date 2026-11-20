@@ -5,8 +5,8 @@ import profileImage from "../assets/images/hafiz.jpg";
 const stats = [
   { value: "7th", label: "Semester Student" },
   { value: "10+", label: "Projects Built" },
-  { value: "2", label: "Internships & Experience" },
-  { value: "20+", label: "Technologies Learned" },
+  { value: "3", label: "Internships & Experience" },
+  { value: "10+", label: "Technologies Learned" },
 ];
 
 const highlights = [
@@ -23,7 +23,7 @@ const highlights = [
   {
     icon: Rocket,
     title: "Full Stack",
-    desc: "Developing complete web applications using React, Node.js, Express.js, and PostgreSQL.",
+    desc: "Developing complete web applications using javaScript EcoSystem with  MongoDB / PostgreSql.",
   },
   {
     icon: Users,

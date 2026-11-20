@@ -69,10 +69,10 @@ const projects = [
       stars: 0,
       forks: 0,
     },
-    featured: false,
+    featured: true,
     color: "from-orange-500/20 to-red-500/20",
     borderColor: "border-orange-500/20",
-    icon: "📊",
+    icon: "🧾",
   },
 
   {
@@ -89,7 +89,7 @@ const projects = [
     featured: false,
     color: "from-teal-500/20 to-green-500/20",
     borderColor: "border-teal-500/20",
-    icon: "🚀",
+    icon: "🛢",
   },
   {
     title: "Zirak AI — AI Assistant",
@@ -114,6 +114,31 @@ const projects = [
     borderColor: "border-violet-500/20",
     icon: "🤖",
   },
+  {
+    title: "Hewad Wadan Construction Company Web & Mobile Applicatoin",
+    description: "final Year Project",
+    tags: [
+      "Requirement Engineering",
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "Tailwind",
+      "Payment Gateway",
+      "Responsive Design",
+      "React Native / Flutter",
+    ],
+    github: null,
+    live: "null",
+    stats: {
+      stars: 0,
+      forks: 0,
+    },
+    featured: true,
+    color: "from-violet-500/20 to-fuchsia-500/20",
+    borderColor: "border-violet-500/20",
+    icon: "🏪",
+  },
 ];
 
 const Projects = () => {
@@ -128,7 +153,7 @@ const Projects = () => {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div data-aos="fade-up" className="mb-16 text-center">
-          <span className="text-neon-sm font-medium tracking-widest uppercase">
+          <span className="font-medium tracking-widest uppercase text-neon-sm">
             Projects
           </span>
           <h2 className="mt-3 mb-4 text-4xl font-bold md:text-5xl font-display">
@@ -184,14 +209,14 @@ const Projects = () => {
               />
 
               {/* Content */}
-              <div className="relative p-6 h-full flex flex-col min-h-70">
+              <div className="relative flex flex-col h-full p-6 min-h-70">
                 {/* Project Icon/Preview */}
                 <div className="flex items-center justify-center mb-4 text-2xl w-14 h-14 rounded-2xl glass-card">
                   {project.icon}
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white font-display mb-2 group-hover:text-neon transition-colors">
+                  <h3 className="mb-2 text-xl font-bold text-white transition-colors font-display group-hover:text-neon">
                     {project.title}
                   </h3>
                   <p className="mb-4 text-sm leading-relaxed text-gray-400">
@@ -227,7 +252,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-neon"
+                      className="flex items-center justify-center text-gray-400 rounded-lg w-9 h-9 glass-card hover:text-neon"
                     >
                       <Github className="w-4 h-4" />
                     </a>
@@ -235,7 +260,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-gray-400 hover:text-neon"
+                      className="flex items-center justify-center text-gray-400 rounded-lg w-9 h-9 glass-card hover:text-neon"
                     >
                       <Github className="w-4 h-4" />
                     </a>
@@ -254,7 +279,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3 rounded-full bg-white text-dark-900font-semibold flex items-center gap-2 hover:shadow-xl transition-all"
+                      className="flex items-center gap-2 px-6 py-3 transition-all bg-white rounded-full text-dark-900font-semibold hover:shadow-xl"
                     >
                       <Eye className="w-4 h-4" />
                       View Project
