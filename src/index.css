@@ -1,6 +1,22 @@
 /* src/index.css */
 
 @import "tailwindcss";
+/* =========================
+   Skills 
+========================= */
+/* Skills section marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
 
